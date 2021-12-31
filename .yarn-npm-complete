@@ -18,3 +18,13 @@ _npm_completions()
 }
 
 complete -F _npm_completions npm
+
+_pnpm_completions()
+{
+  s=$(node -p "Object.keys(require('./package.json').scripts).join(' ')")
+  if [[ "${COMP_CWORD}" == "1" ]];then
+    COMPREPLY=($(compgen -W "${s}" ${COMP_WORDS[1]}))
+  fi
+}
+
+complete -F _yarn_completions pnpm

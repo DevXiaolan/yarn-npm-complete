@@ -1,0 +1,20 @@
+{
+  "name": "yarn-complete",
+  "version": "1.0.0",
+  "description": "`yarn` 以及 `npm run` 自动补全，自动“猜解”当前目录 `package.json` 里的 `scripts` 对象。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevXiaolan/yarn-npm-complete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevXiaolan/yarn-npm-complete/issues"
+  },
+  "homepage": "https://github.com/DevXiaolan/yarn-npm-complete#readme"
+}
