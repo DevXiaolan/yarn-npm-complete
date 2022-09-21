@@ -1,9 +1,12 @@
 #/usr/bin/env bash
+
+common="audit install init publish whoami login"
+
 _yarn_completions()
 {
   s=$(node -p "Object.keys(require('./package.json').scripts).join(' ')")
   if [[ "${COMP_CWORD}" == "1" ]];then
-    COMPREPLY=($(compgen -W "${s}" ${COMP_WORDS[1]}))
+    COMPREPLY=($(compgen -W "${s} add ${common} why " ${COMP_WORDS[1]}))
   fi
 }
 
@@ -12,6 +15,9 @@ complete -F _yarn_completions yarn
 _npm_completions()
 {
   s=$(node -p "Object.keys(require('./package.json').scripts).join(' ')")
+  if [[ "${COMP_CWORD}" == "1" ]];then
+    COMPREPLY=($(compgen -W "run ${common}" ${COMP_WORDS[1]}))
+  fi
   if [[ "${COMP_WORDS[1]}" == "run" ]];then
     COMPREPLY=($(compgen -W "${s}" ${COMP_WORDS[2]}))
   fi
@@ -23,8 +29,8 @@ _pnpm_completions()
 {
   s=$(node -p "Object.keys(require('./package.json').scripts).join(' ')")
   if [[ "${COMP_CWORD}" == "1" ]];then
-    COMPREPLY=($(compgen -W "${s}" ${COMP_WORDS[1]}))
+    COMPREPLY=($(compgen -W "${s} add ${common} why" ${COMP_WORDS[1]}))
   fi
 }
 
-complete -F _yarn_completions pnpm
+complete -F _pnpm_completions pnpm

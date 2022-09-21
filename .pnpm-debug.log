@@ -1,0 +1,14 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_MISSING_PACKAGE_NAME",
+    "err": {
+      "name": "pnpm",
+      "message": "`pnpm why` requires the package name",
+      "code": "ERR_PNPM_MISSING_PACKAGE_NAME",
+      "stack": "pnpm: `pnpm why` requires the package name\n    at Object.handler [as why] (/Users/lanhao/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:176132:15)\n    at /Users/lanhao/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182192:83\n    at async run (/Users/lanhao/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182168:34)\n    at async runPnpm (/Users/lanhao/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182387:5)\n    at async /Users/lanhao/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182379:7"
+    }
+  }
+}
